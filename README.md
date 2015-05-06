@@ -3,7 +3,7 @@ SwitcherView
 
 Try to implement Chrome's tab switcher view in Android.
 
-__UNDER DEVELOPMENT!!!___
+__UNDER DEVELOPMENT!!!__
 
 ## License:
 
