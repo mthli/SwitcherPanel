@@ -1,7 +1,7 @@
 SwitcherView
 ===
 
-Try to implement Firefox(for Android)'s switcher view.
+Try to implement Firefox(for Android)'s switcher panel.
 
 __UNDER DEVELOPMENT!!!__
 
