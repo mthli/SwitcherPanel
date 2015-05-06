@@ -1,4 +1,4 @@
-SwitcherView
+SwitcherPanel
 ===
 
 Try to implement Firefox(for Android)'s switcher panel.
