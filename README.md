@@ -1,7 +1,7 @@
 SwitcherView
 ===
 
-Try to implement Chrome's tab switcher view in Android.
+Try to implement Firefox(for Android)'s tab switcher view.
 
 __UNDER DEVELOPMENT!!!__
 
