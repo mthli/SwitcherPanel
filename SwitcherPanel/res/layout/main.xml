@@ -6,19 +6,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <FrameLayout android:id="@+id/switcher_view"
+    <HorizontalScrollView android:id="@+id/switcher_view"
                  android:layout_width="match_parent"
-                 android:layout_height="match_parent"
+                 android:layout_height="100dp"
                  android:background="#2196F3">
 
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:text="switcher">
-        </Button>
+            <LinearLayout android:id="@+id/switcher_container"
+                          android:orientation="horizontal"
+                          android:layout_width="wrap_content"
+                          android:layout_height="match_parent">
+            </LinearLayout>
 
-    </FrameLayout>
+    </HorizontalScrollView>
 
     <FrameLayout android:id="@+id/content_view"
                  android:layout_width="match_parent"

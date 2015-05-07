@@ -189,7 +189,7 @@ public class SwitcherPanel extends ViewGroup {
         setFlingVelocity(FLING_VELOCITY_DEFAULT);
         setWillNotDraw(false);
 
-        coverHeight = (int) ViewUnit.dp2px(context, 100); // TODO
+        coverHeight = (int) ViewUnit.dp2px(context, 128); // TODO
     }
 
     @Override
@@ -289,6 +289,18 @@ public class SwitcherPanel extends ViewGroup {
             child.layout(left, top, right, bottom);
         }
         applyParallaxForCurrentSlideOffset(); // TODO
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+
+        int left = contentView.getLeft();
+        int top = contentView.getTop() - ((int) (shadowHeight * ViewUnit.getDensity(getContext())));
+        int right = contentView.getRight();
+        int bottom = contentView.getTop();
+        shadowDrawable.setBounds(left, top, right, bottom);
+        shadowDrawable.draw(canvas);
     }
 
     private int computeTopPosition(float slideOffset) {
@@ -414,17 +426,5 @@ public class SwitcherPanel extends ViewGroup {
             float offset = parallaxOffset * ViewUnit.getDensity(getContext());
             switcherView.setTranslationY(-(offset * Math.max(slideOffset, 0)));
         }
-    }
-
-    @Override
-    public void draw(Canvas canvas) {
-        super.draw(canvas);
-
-        int left = contentView.getLeft();
-        int top = contentView.getTop() - ((int) (shadowHeight * ViewUnit.getDensity(getContext())));
-        int right = contentView.getRight();
-        int bottom = contentView.getTop();
-        shadowDrawable.setBounds(left, top, right, bottom);
-        shadowDrawable.draw(canvas);
     }
 }
