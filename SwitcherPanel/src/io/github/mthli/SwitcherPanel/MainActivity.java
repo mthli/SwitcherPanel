@@ -25,11 +25,8 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
-            case R.id.main_menu_show:
-                switcherPanel.show();
-                break;
-            case R.id.main_menu_hide:
-                switcherPanel.hide();
+            case R.id.main_menu_collapsed:
+                switcherPanel.collapsed();
                 break;
             default:
                 break;

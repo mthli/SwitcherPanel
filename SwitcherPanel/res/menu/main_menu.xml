@@ -2,13 +2,8 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/main_menu_show"
-          android:title="show"
-          android:showAsAction="always">
-    </item>
-
-    <item android:id="@+id/main_menu_hide"
-          android:title="hide"
+    <item android:id="@+id/main_menu_collapsed"
+          android:title="collapsed"
           android:showAsAction="always">
     </item>
 

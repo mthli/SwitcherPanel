@@ -14,12 +14,26 @@ public class SwitcherPanel extends ViewGroup {
     private View switcherView;
     private View contentView;
 
-    private int contentHeight = 0;
+    private int coverHeight = 0;
     private int slideRange = 0;
     private float slideOffset = 1f;
 
-    private static final int FLING_VELOCITY_DEFAULT = 400;
+    private static final float PARALLAX_OFFSET_DEFAULT = 64f;
+    private float parallaxOffset = PARALLAX_OFFSET_DEFAULT;
+    public float getParallaxOffset() {
+        return parallaxOffset;
+    }
+    public void setParallaxOffset(float parallaxOffset) {
+        this.parallaxOffset = parallaxOffset * ViewUnit.getDensity(getContext());
+    }
+
+    private static final int FLING_VELOCITY_DEFAULT = 256;
+    private int flingVelocity = FLING_VELOCITY_DEFAULT;
+    public int getFlingVelocity() {
+        return flingVelocity;
+    }
     public void setFlingVelocity(int flingVelocity) {
+        this.flingVelocity = flingVelocity;
         if (dragHelper != null) {
             dragHelper.setMinVelocity(flingVelocity * ViewUnit.getDensity(getContext()));
         }
@@ -71,9 +85,17 @@ public class SwitcherPanel extends ViewGroup {
         }
 
         @Override
+        public void onViewPositionChanged(View changedView, int left, int top, int dx, int dy) {
+            fling(top);
+            invalidate();
+        }
+
+        @Override
         public void onViewDragStateChanged(int state) {
             if (dragHelper.getViewDragState() == ViewDragHelper.STATE_IDLE) {
                 slideOffset = computeSlideOffset(contentView.getTop());
+                applyParallaxForCurrentSlideOffset();
+
                 if (slideOffset == 1f && status != Status.EXPANDED) {
                     status = Status.EXPANDED;
                     dispatchOnExpanded();
@@ -148,7 +170,7 @@ public class SwitcherPanel extends ViewGroup {
         this.dragHelper = ViewDragHelper.create(this, 0.5f, new DragHelperCallback());
         setFlingVelocity(FLING_VELOCITY_DEFAULT);
 
-        contentHeight = (int) ViewUnit.dp2px(context, 100); // TODO
+        coverHeight = (int) ViewUnit.dp2px(context, 100); // TODO
     }
 
     @Override
@@ -221,7 +243,7 @@ public class SwitcherPanel extends ViewGroup {
 
             child.measure(childWidthSpec, childHeightSpec);
             if (child == contentView) {
-                slideRange = contentView.getMeasuredHeight() - contentHeight;
+                slideRange = contentView.getMeasuredHeight() - coverHeight;
             }
         }
 
@@ -247,16 +269,16 @@ public class SwitcherPanel extends ViewGroup {
             int right = left + child.getMeasuredWidth();
             child.layout(left, top, right, bottom);
         }
+        applyParallaxForCurrentSlideOffset(); // TODO
     }
 
     private int computeTopPosition(float slideOffset) {
         int slidePixelOffset = (int) (slideOffset * slideRange);
-        return getMeasuredHeight() - getPaddingBottom() - contentHeight - slidePixelOffset;
+        return getMeasuredHeight() - getPaddingBottom() - coverHeight - slidePixelOffset;
     }
 
     private float computeSlideOffset(int topPosition) {
-        int topBoundCollapsed = computeTopPosition(0f);
-        return (topBoundCollapsed - topPosition) / slideRange;
+        return (computeTopPosition(0f) - ((float) topPosition)) / ((float) slideRange);
     }
 
     @Override
@@ -278,7 +300,7 @@ public class SwitcherPanel extends ViewGroup {
         }
 
         if (shouldShowContentView(motionEvent)) {
-            show();
+            expanded();
             return true;
         }
         return super.onInterceptTouchEvent(motionEvent);
@@ -299,18 +321,32 @@ public class SwitcherPanel extends ViewGroup {
                 && motionEvent.getRawY() <= bottom;
     }
 
-    public void show() {
-        status = Status.FLING;
-        dispatchOnFling();
+    public void expanded() {
         smoothSlideTo(1f);
         status = Status.EXPANDED;
     }
 
-    public void hide() {
-        status = Status.FLING;
-        dispatchOnFling();
+    public void collapsed() {
         smoothSlideTo(0f);
         status = Status.COLLAPSED;
+    }
+
+    private void fling(int top) {
+        status = Status.FLING;
+        slideOffset = computeSlideOffset(top);
+
+        applyParallaxForCurrentSlideOffset();
+        dispatchOnFling();
+
+        LayoutParams layoutParams = (LayoutParams) switcherView.getLayoutParams();
+        int defaultHeight = getHeight() - getPaddingBottom() - getPaddingTop() - coverHeight;
+        if (slideOffset < 0) {
+            layoutParams.height = top - getPaddingBottom();
+            switcherView.requestLayout();
+        } else if (layoutParams.height != defaultHeight) {
+            layoutParams.height = defaultHeight;
+            switcherView.requestLayout();
+        }
     }
 
     private void dispatchOnExpanded() {
@@ -351,6 +387,12 @@ public class SwitcherPanel extends ViewGroup {
             if (child.getVisibility() == INVISIBLE) {
                 child.setVisibility(VISIBLE);
             }
+        }
+    }
+
+    private void applyParallaxForCurrentSlideOffset() {
+        if (parallaxOffset > 0) {
+            switcherView.setTranslationY(-(parallaxOffset * Math.max(slideOffset, 0)));
         }
     }
 }
