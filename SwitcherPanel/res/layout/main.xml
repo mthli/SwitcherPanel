@@ -6,17 +6,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <View android:id="@+id/switcher_view"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:background="#2196F3">
-    </View>
+    <FrameLayout android:id="@+id/switcher_view"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="#2196F3">
 
-    <View android:id="@+id/content_view"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:background="#56F870">
-    </View>
+        <Button android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="switcher">
+        </Button>
+
+    </FrameLayout>
+
+    <FrameLayout android:id="@+id/content_view"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="#56F870">
+
+        <Button android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="content">
+        </Button>
+
+    </FrameLayout>
 
 </io.github.mthli.SwitcherPanel.SwitcherPanel>
 

@@ -2,8 +2,6 @@ package io.github.mthli.SwitcherPanel;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
@@ -15,7 +13,6 @@ import android.view.ViewGroup;
 public class SwitcherPanel extends ViewGroup {
     private View switcherView;
     private View contentView;
-    private Drawable shadowDrawable;
 
     private int contentHeight = 0;
     private int slideRange = 0;
@@ -29,16 +26,19 @@ public class SwitcherPanel extends ViewGroup {
     }
 
     public enum Status {
-        SHOW,
-        HIDE,
+        EXPANDED,
+        COLLAPSED,
         FLING
     }
-    private static final Status STATUS_DEFAULT = Status.HIDE;
+    private static final Status STATUS_DEFAULT = Status.EXPANDED;
     private Status status = STATUS_DEFAULT;
+    public Status getStatus() {
+        return status;
+    }
 
     public interface StatusListener {
-        void onShow();
-        void onHide();
+        void onExpanded();
+        void onCollapsed();
         void onFling();
     }
     private StatusListener statusListener;
@@ -74,12 +74,12 @@ public class SwitcherPanel extends ViewGroup {
         public void onViewDragStateChanged(int state) {
             if (dragHelper.getViewDragState() == ViewDragHelper.STATE_IDLE) {
                 slideOffset = computeSlideOffset(contentView.getTop());
-                if (slideOffset == 1f && status != Status.SHOW) {
-                    status = Status.SHOW;
-                    dispatchOnShow();
-                } else if (slideOffset == 0f && status != Status.HIDE) {
-                    status = Status.HIDE;
-                    dispatchOnHide();
+                if (slideOffset == 1f && status != Status.EXPANDED) {
+                    status = Status.EXPANDED;
+                    dispatchOnExpanded();
+                } else if (slideOffset == 0f && status != Status.COLLAPSED) {
+                    status = Status.COLLAPSED;
+                    dispatchOnCollapsed();
                 }
             }
         }
@@ -145,14 +145,8 @@ public class SwitcherPanel extends ViewGroup {
     public SwitcherPanel(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            this.shadowDrawable = getResources().getDrawable(R.drawable.shadow, null);
-        } else {
-            this.shadowDrawable = getResources().getDrawable(R.drawable.shadow);
-        }
         this.dragHelper = ViewDragHelper.create(this, 0.5f, new DragHelperCallback());
         setFlingVelocity(FLING_VELOCITY_DEFAULT);
-        setWillNotDraw(false);
 
         contentHeight = (int) ViewUnit.dp2px(context, 100); // TODO
     }
@@ -278,54 +272,62 @@ public class SwitcherPanel extends ViewGroup {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent motionEvent) {
-        if (!isEnabled()) {
-            dragHelper.cancel();
+        int action = motionEvent.getActionMasked();
+        if (!isEnabled() || action == MotionEvent.ACTION_CANCEL) {
             return super.onInterceptTouchEvent(motionEvent);
         }
 
-        int action = motionEvent.getActionMasked();
-        if (action == MotionEvent.ACTION_CANCEL || action == MotionEvent.ACTION_UP) {
-            dragHelper.cancel();
-            return false;
+        if (shouldShowContentView(motionEvent)) {
+            show();
+            return true;
         }
-
-        return dragHelper.shouldInterceptTouchEvent(motionEvent);
+        return super.onInterceptTouchEvent(motionEvent);
     }
 
-    @Override
-    public boolean onTouchEvent(@NonNull MotionEvent motionEvent) {
-        if (!isEnabled()) {
-            return super.onTouchEvent(motionEvent);
-        }
+    private boolean shouldShowContentView(@NonNull MotionEvent motionEvent) {
+        int[] location = new int[2];
+        contentView.getLocationOnScreen(location);
 
-        dragHelper.processTouchEvent(motionEvent);
-        return true;
+        int left = location[0];
+        int right = left + contentView.getWidth();
+        int top = location[1];
+        int bottom = top + contentView.getHeight();
+        return status == Status.COLLAPSED
+                && left <= motionEvent.getRawX()
+                && motionEvent.getRawX() <= right
+                && top <= motionEvent.getRawY()
+                && motionEvent.getRawY() <= bottom;
     }
 
-    private void dispatchOnShow() {
+    public void show() {
+        status = Status.FLING;
+        dispatchOnFling();
+        smoothSlideTo(1f);
+        status = Status.EXPANDED;
+    }
+
+    public void hide() {
+        status = Status.FLING;
+        dispatchOnFling();
+        smoothSlideTo(0f);
+        status = Status.COLLAPSED;
+    }
+
+    private void dispatchOnExpanded() {
         if (statusListener != null) {
-            statusListener.onShow();
+            statusListener.onExpanded();
         }
     }
 
-    private void dispatchOnHide() {
+    private void dispatchOnCollapsed() {
         if (statusListener != null) {
-            statusListener.onHide();
+            statusListener.onCollapsed();
         }
     }
 
     private void dispatchOnFling() {
         if (statusListener != null) {
             statusListener.onFling();
-        }
-    }
-
-    private void setAllChildrenVisible() {
-        for (int i = 0, childCount = getChildCount(); i < childCount; i++) {
-            final View child = getChildAt(i);
-            if (child.getVisibility() == INVISIBLE) {
-                child.setVisibility(VISIBLE);
-            }
         }
     }
 
@@ -343,15 +345,12 @@ public class SwitcherPanel extends ViewGroup {
         return false;
     }
 
-    public void show() {
-        status = Status.FLING;
-        dispatchOnFling();
-        smoothSlideTo(1f);
-    }
-
-    public void hide() {
-        status = Status.FLING;
-        dispatchOnFling();
-        smoothSlideTo(0f);
+    private void setAllChildrenVisible() {
+        for (int i = 0, childCount = getChildCount(); i < childCount; i++) {
+            final View child = getChildAt(i);
+            if (child.getVisibility() == INVISIBLE) {
+                child.setVisibility(VISIBLE);
+            }
+        }
     }
 }
