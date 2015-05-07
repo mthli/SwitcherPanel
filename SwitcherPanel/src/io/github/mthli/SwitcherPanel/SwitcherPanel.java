@@ -2,8 +2,8 @@ package io.github.mthli.SwitcherPanel;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
@@ -17,15 +17,9 @@ public class SwitcherPanel extends ViewGroup {
     private View contentView;
     private Drawable shadowDrawable;
 
-    private int contentHeight = 0; // TODO
+    private int contentHeight = 0;
     private int slideRange = 0;
     private float slideOffset = 1f;
-
-    private static final int SHADOW_HEIGHT_DEFAULT = 4;
-    private int shadowHeight = SHADOW_HEIGHT_DEFAULT;
-    public void setShadowHeight(int shadowHeight) {
-        this.shadowHeight = shadowHeight;
-    }
 
     private static final int FLING_VELOCITY_DEFAULT = 400;
     public void setFlingVelocity(int flingVelocity) {
@@ -36,7 +30,8 @@ public class SwitcherPanel extends ViewGroup {
 
     public enum Status {
         SHOW,
-        HIDE
+        HIDE,
+        FLING
     }
     private static final Status STATUS_DEFAULT = Status.HIDE;
     private Status status = STATUS_DEFAULT;
@@ -44,6 +39,7 @@ public class SwitcherPanel extends ViewGroup {
     public interface StatusListener {
         void onShow();
         void onHide();
+        void onFling();
     }
     private StatusListener statusListener;
     public void setStatusListener(StatusListener statusListener) {
@@ -78,10 +74,10 @@ public class SwitcherPanel extends ViewGroup {
         public void onViewDragStateChanged(int state) {
             if (dragHelper.getViewDragState() == ViewDragHelper.STATE_IDLE) {
                 slideOffset = computeSlideOffset(contentView.getTop());
-                if (slideOffset == 1 && status != Status.SHOW) {
+                if (slideOffset == 1f && status != Status.SHOW) {
                     status = Status.SHOW;
                     dispatchOnShow();
-                } else if (slideOffset == 0 && status != Status.HIDE) {
+                } else if (slideOffset == 0f && status != Status.HIDE) {
                     status = Status.HIDE;
                     dispatchOnHide();
                 }
@@ -145,18 +141,20 @@ public class SwitcherPanel extends ViewGroup {
         this(context, attrs, 0);
     }
 
+    @SuppressWarnings("getResource().getDrawable(int) is deprecated.")
     public SwitcherPanel(Context context, AttributeSet attrs, int defStyleAttr) {
-        this(context, attrs, defStyleAttr, 0);
-    }
+        super(context, attrs, defStyleAttr);
 
-    // TODO: contentHeight
-    public SwitcherPanel(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-
-        this.shadowDrawable = getResources().getDrawable(R.drawable.shadow, null);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            this.shadowDrawable = getResources().getDrawable(R.drawable.shadow, null);
+        } else {
+            this.shadowDrawable = getResources().getDrawable(R.drawable.shadow);
+        }
         this.dragHelper = ViewDragHelper.create(this, 0.5f, new DragHelperCallback());
         setFlingVelocity(FLING_VELOCITY_DEFAULT);
         setWillNotDraw(false);
+
+        contentHeight = (int) ViewUnit.dp2px(context, 100); // TODO
     }
 
     @Override
@@ -181,12 +179,22 @@ public class SwitcherPanel extends ViewGroup {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (MeasureSpec.getMode(widthMeasureSpec) != MeasureSpec.EXACTLY) {
+            throw new IllegalStateException("Width must have an exact value or MATCH_PARENT.");
+        } else if (MeasureSpec.getMode(heightMeasureSpec) != MeasureSpec.EXACTLY) {
+            throw new IllegalStateException("Height must have an exact value or MATCH_PARENT.");
+        } else if (getChildCount() != 2) {
+            throw new IllegalStateException("SwitcherPanel layout must have exactly 2 children!");
+        }
+
+        switcherView = getChildAt(0);
+        contentView = getChildAt(1);
+
         int widthSize = MeasureSpec.getSize(widthMeasureSpec);
         int heightSize = MeasureSpec.getSize(heightMeasureSpec);
-        setMeasuredDimension(widthSize, heightSize);
-
         int layoutWidth = widthSize - getPaddingLeft() - getPaddingRight();
         int layoutHeight = heightSize - getPaddingTop() - getPaddingBottom();
+
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
             LayoutParams layoutParams = (LayoutParams) child.getLayoutParams();
@@ -222,6 +230,8 @@ public class SwitcherPanel extends ViewGroup {
                 slideRange = contentView.getMeasuredHeight() - contentHeight;
             }
         }
+
+        setMeasuredDimension(widthSize, heightSize);
     }
 
     @Override
@@ -230,7 +240,7 @@ public class SwitcherPanel extends ViewGroup {
         int paddingTop = getPaddingTop();
 
         for (int i = 0; i < getChildCount(); i++) {
-            View child = getChildAt(0);
+            View child = getChildAt(i);
             LayoutParams layoutParams = (LayoutParams) child.getLayoutParams();
 
             int top = paddingTop;
@@ -242,21 +252,6 @@ public class SwitcherPanel extends ViewGroup {
             int left = paddingLeft + layoutParams.leftMargin;
             int right = left + child.getMeasuredWidth();
             child.layout(left, top, right, bottom);
-        }
-    }
-
-    @Override
-    public void draw(@NonNull Canvas canvas) {
-        super.draw(canvas);
-
-        if (shadowDrawable != null && shadowHeight > 0) {
-            shadowDrawable.setBounds(
-                    contentView.getLeft(),
-                    contentView.getTop() - shadowHeight,
-                    contentView.getRight(),
-                    contentView.getTop()
-            );
-            shadowDrawable.draw(canvas);
         }
     }
 
@@ -319,6 +314,12 @@ public class SwitcherPanel extends ViewGroup {
         }
     }
 
+    private void dispatchOnFling() {
+        if (statusListener != null) {
+            statusListener.onFling();
+        }
+    }
+
     private void setAllChildrenVisible() {
         for (int i = 0, childCount = getChildCount(); i < childCount; i++) {
             final View child = getChildAt(i);
@@ -343,14 +344,14 @@ public class SwitcherPanel extends ViewGroup {
     }
 
     public void show() {
-        status = Status.SHOW;
+        status = Status.FLING;
+        dispatchOnFling();
         smoothSlideTo(1f);
-        dispatchOnShow();
     }
 
     public void hide() {
-        status = Status.HIDE;
+        status = Status.FLING;
+        dispatchOnFling();
         smoothSlideTo(0f);
-        dispatchOnHide();
     }
 }
