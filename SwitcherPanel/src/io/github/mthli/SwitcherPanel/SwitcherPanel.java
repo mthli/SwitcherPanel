@@ -2,6 +2,9 @@ package io.github.mthli.SwitcherPanel;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
@@ -13,18 +16,28 @@ import android.view.ViewGroup;
 public class SwitcherPanel extends ViewGroup {
     private View switcherView;
     private View contentView;
+    private Drawable shadowDrawable;
 
     private int coverHeight = 0;
     private int slideRange = 0;
     private float slideOffset = 1f;
 
-    private static final float PARALLAX_OFFSET_DEFAULT = 64f;
-    private float parallaxOffset = PARALLAX_OFFSET_DEFAULT;
-    public float getParallaxOffset() {
+    private static final int SHADOW_HEIGHT_DEFAULT = 2;
+    private int shadowHeight = SHADOW_HEIGHT_DEFAULT;
+    public int getShadowHeight() {
+        return shadowHeight;
+    }
+    public void setShadowHeight(int shadowHeight) {
+        this.shadowHeight = shadowHeight;
+    }
+
+    private static final int PARALLAX_OFFSET_DEFAULT = 64;
+    private int parallaxOffset = PARALLAX_OFFSET_DEFAULT;
+    public int getParallaxOffset() {
         return parallaxOffset;
     }
-    public void setParallaxOffset(float parallaxOffset) {
-        this.parallaxOffset = parallaxOffset * ViewUnit.getDensity(getContext());
+    public void setParallaxOffset(int parallaxOffset) {
+        this.parallaxOffset = parallaxOffset;
     }
 
     private static final int FLING_VELOCITY_DEFAULT = 256;
@@ -167,8 +180,14 @@ public class SwitcherPanel extends ViewGroup {
     public SwitcherPanel(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            shadowDrawable = getResources().getDrawable(R.drawable.shadow, null);
+        } else {
+            shadowDrawable = getResources().getDrawable(R.drawable.shadow);
+        }
         this.dragHelper = ViewDragHelper.create(this, 0.5f, new DragHelperCallback());
         setFlingVelocity(FLING_VELOCITY_DEFAULT);
+        setWillNotDraw(false);
 
         coverHeight = (int) ViewUnit.dp2px(context, 100); // TODO
     }
@@ -392,7 +411,20 @@ public class SwitcherPanel extends ViewGroup {
 
     private void applyParallaxForCurrentSlideOffset() {
         if (parallaxOffset > 0) {
-            switcherView.setTranslationY(-(parallaxOffset * Math.max(slideOffset, 0)));
+            float offset = parallaxOffset * ViewUnit.getDensity(getContext());
+            switcherView.setTranslationY(-(offset * Math.max(slideOffset, 0)));
         }
+    }
+
+    @Override
+    public void draw(Canvas canvas) {
+        super.draw(canvas);
+
+        int left = contentView.getLeft();
+        int top = contentView.getTop() - ((int) (shadowHeight * ViewUnit.getDensity(getContext())));
+        int right = contentView.getRight();
+        int bottom = contentView.getTop();
+        shadowDrawable.setBounds(left, top, right, bottom);
+        shadowDrawable.draw(canvas);
     }
 }

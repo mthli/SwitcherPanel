@@ -32,6 +32,90 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="SlidingUpPanelLayout.java" pinned="false" current-in-tab="true">
+              <entry file="file://$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/src/com/sothree/slidinguppanel/SlidingUpPanelLayout.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="-0.7053292">
+                    <caret line="928" column="38" selection-start-line="928" selection-start-column="38" selection-end-line="928" selection-end-column="38" />
+                    <folding>
+                      <element signature="class#PanelState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#PanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelSlide#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelCollapsed#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelExpanded#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelAnchored#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelHidden#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#SlidingUpPanelLayout#2;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onFinishInflate#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setGravity#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setCoveredFadeColor#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#isTouchEnabled#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setPanelHeight#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setShadowHeight#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#getCurrentParalaxOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setParalaxOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setDragView#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setDragView#1;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setAnchorPoint#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#dispatchOnPanelSlide#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#dispatchOnPanelExpanded#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#dispatchOnPanelCollapsed#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#dispatchOnPanelAnchored#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#dispatchOnPanelHidden#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#updateObscuredViewVisibility#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setAllChildrenVisible#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#hasOpaqueBackground#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onAttachedToWindow#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onDetachedFromWindow#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onMeasure#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="e#18477#18533#0" expanded="false" />
+                      <element signature="method#onLayout#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onSizeChanged#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onInterceptTouchEvent#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onTouchEvent#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#isDragViewUnder#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#computePanelTopPosition#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#computeSlideOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#setPanelState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#applyParallaxForCurrentSlideOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onPanelDragged#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#smoothSlideTo#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#computeScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="docComment;method#canScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#canScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#generateLayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#checkLayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#generateLayoutParams#1;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onSaveInstanceState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onRestoreInstanceState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#tryCaptureView#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onViewDragStateChanged#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onViewPositionChanged#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#clampViewPositionVertical#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#LayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#SavedState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#SavedState#1;class#SavedState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="method#writeToParcel#0;class#SavedState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+                      <element signature="class#39946:40336" expanded="false" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="SwitcherPanel">
@@ -43,11 +127,10 @@
       <file leaf-file-name="SwitcherPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1983471">
-              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.32608697">
+              <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="false" />
-                <element signature="method#setParallaxOffset#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
@@ -58,11 +141,13 @@
                 <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-                <element signature="method#generateLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-                <element signature="method#generateLayoutParams#1;class#SwitcherPanel#0" expanded="false" />
-                <element signature="method#checkLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-                <element signature="method#onMeasure#0;class#SwitcherPanel#0" expanded="false" />
-                <element signature="method#onLayout#0;class#SwitcherPanel#0" expanded="false" />
+                <element signature="e#5307#5308#0" expanded="true" />
+                <element signature="e#5342#5343#0" expanded="true" />
+                <element signature="e#5407#5408#0" expanded="true" />
+                <element signature="e#5446#5447#0" expanded="true" />
+                <element signature="e#5453#5519#0" expanded="true" />
+                <element signature="e#6225#6226#0" expanded="true" />
+                <element signature="e#6266#6267#0" expanded="true" />
                 <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />
@@ -78,6 +163,29 @@
                 <element signature="method#setAllChildrenVisible#0;class#SwitcherPanel#0" expanded="false" />
                 <element signature="method#applyParallaxForCurrentSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.785714">
+              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shadow.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/drawable/shadow.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,15 +218,15 @@
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/ViewDragHelper.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/ViewUnit.java" />
         <option value="$PROJECT_DIR$/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/shadow.xml" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/ViewDragHelperCallback.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/DragHelperCallback.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/StatusListener.java" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherLayoutParams.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/res/menu/main_menu.xml" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/MainActivity.java" />
+        <option value="$PROJECT_DIR$/res/drawable/shadow.xml" />
+        <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherPanel.java" />
       </list>
     </option>
@@ -127,10 +235,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-2" />
-    <option name="y" value="-3" />
-    <option name="width" value="1370" />
-    <option name="height" value="748" />
+    <option name="width" value="683" />
+    <option name="height" value="741" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -156,8 +262,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -186,29 +290,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwitcherPanel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwitcherPanel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwitcherPanel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -248,22 +330,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwitcherPanel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SwitcherPanel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,7 +351,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/src/com/sothree/slidinguppanel/SlidingUpPanelLayout.java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/res/drawable/above_shadow.xml" />
   </component>
   <component name="RunManager" selected="Android Application.SwitcherPanel">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -476,19 +546,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-2" y="-3" width="1370" height="748" extended-state="6" />
+    <frame x="0" y="0" width="683" height="741" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280507" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32905295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="282" y="212" width="872" height="464" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.32905295" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" x="413" y="196" width="872" height="464" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32636657" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32594937" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32930514" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32753164" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -498,8 +568,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.4301413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="204" y="79" width="372" height="604" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.5949764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="801" y="67" width="366" height="630" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.431962" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.5949764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="801" y="67" width="366" height="630" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4304" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Memory Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -537,7 +607,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="method#setParallaxOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
@@ -548,11 +617,13 @@
             <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#1;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#checkLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onMeasure#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onLayout#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5342#5343#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5453#5519#0" expanded="true" />
+            <element signature="e#6225#6226#0" expanded="true" />
+            <element signature="e#6266#6267#0" expanded="true" />
             <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />
@@ -577,7 +648,6 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="method#setParallaxOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
@@ -588,11 +658,95 @@
             <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#1;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#checkLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onMeasure#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onLayout#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5342#5343#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5453#5519#0" expanded="true" />
+            <element signature="e#6225#6226#0" expanded="true" />
+            <element signature="e#6266#6267#0" expanded="true" />
+            <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onInterceptTouchEvent#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#shouldShowContentView#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#expanded#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#collapsed#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#fling#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnExpanded#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnCollapsed#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnFling#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#smoothSlideTo#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#setAllChildrenVisible#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#applyParallaxForCurrentSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#clampViewPositionVertical#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewPositionChanged#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewDragStateChanged#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5342#5343#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5453#5519#0" expanded="true" />
+            <element signature="e#6225#6226#0" expanded="true" />
+            <element signature="e#6266#6267#0" expanded="true" />
+            <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onInterceptTouchEvent#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#shouldShowContentView#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#expanded#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#collapsed#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#fling#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnExpanded#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnCollapsed#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#dispatchOnFling#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#smoothSlideTo#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#setAllChildrenVisible#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#applyParallaxForCurrentSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#clampViewPositionVertical#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewPositionChanged#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewDragStateChanged#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5342#5343#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5453#5519#0" expanded="true" />
+            <element signature="e#6225#6226#0" expanded="true" />
+            <element signature="e#6266#6267#0" expanded="true" />
             <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />
@@ -647,18 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/res/drawable/above_shadow.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15050167">
-          <caret line="6" column="15" selection-start-line="2" selection-start-column="4" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values/colors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10033445">
           <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15706806">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,7 +827,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.050167225">
           <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -706,32 +850,19 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/GitHub/AndroidSlidingUpPanel/README.md">
-      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
     <entry file="file:///opt/android-sdk/sources/android-22/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3031" column="57" selection-start-line="3031" selection-start-column="4" selection-end-line="3031" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6052632">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -747,16 +878,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2257525">
           <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/src/com/sothree/slidinguppanel/SlidingUpPanelLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.119008">
-          <caret line="903" column="31" selection-start-line="903" selection-start-column="17" selection-end-line="903" selection-end-column="31" />
+        <state vertical-scroll-proportion="-0.7053292">
+          <caret line="928" column="38" selection-start-line="928" selection-start-column="38" selection-end-line="928" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="class#PanelState#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="class#PanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
@@ -765,12 +894,15 @@
             <element signature="method#onPanelExpanded#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onPanelAnchored#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onPanelHidden#0;class#SimplePanelSlideListener#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#SlidingUpPanelLayout#2;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onFinishInflate#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setGravity#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setCoveredFadeColor#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#isTouchEnabled#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setPanelHeight#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setShadowHeight#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#getCurrentParalaxOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#setParalaxOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setDragView#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setDragView#1;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setAnchorPoint#0;class#SlidingUpPanelLayout#0" expanded="false" />
@@ -786,6 +918,7 @@
             <element signature="method#onDetachedFromWindow#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onMeasure#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="e#18477#18533#0" expanded="false" />
+            <element signature="method#onLayout#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onSizeChanged#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onInterceptTouchEvent#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onTouchEvent#0;class#SlidingUpPanelLayout#0" expanded="false" />
@@ -793,11 +926,10 @@
             <element signature="method#computePanelTopPosition#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#computeSlideOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#setPanelState#0;class#SlidingUpPanelLayout#0" expanded="false" />
-            <element signature="method#drawChild#0;class#SlidingUpPanelLayout#0" expanded="false" />
-            <element signature="e#28800#28815#0" expanded="false" />
+            <element signature="method#applyParallaxForCurrentSlideOffset#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#onPanelDragged#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#smoothSlideTo#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#computeScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
-            <element signature="method#draw#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="docComment;method#canScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#canScroll#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#generateLayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
@@ -805,7 +937,10 @@
             <element signature="method#generateLayoutParams#1;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onSaveInstanceState#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onRestoreInstanceState#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#tryCaptureView#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#onViewDragStateChanged#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
+            <element signature="method#onViewPositionChanged#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="method#clampViewPositionVertical#0;class#DragHelperCallback#0;class#SlidingUpPanelLayout#0" expanded="false" />
             <element signature="class#LayoutParams#0;class#SlidingUpPanelLayout#0" expanded="false" />
@@ -818,13 +953,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AndroidStudioProjects/AndroidSlidingUpPanel/library/res/drawable/above_shadow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="15" selection-start-line="2" selection-start-column="4" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable/shadow.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.785714">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/io/github/mthli/SwitcherPanel/SwitcherPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1983471">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.32608697">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="method#setParallaxOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#setFlingVelocity#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#Status#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#StatusListener#0;class#SwitcherPanel#0" expanded="false" />
@@ -835,11 +996,13 @@
             <element signature="method#onViewReleased#0;class#DragHelperCallback#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#LayoutParams#5;class#LayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#generateLayoutParams#1;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#checkLayoutParams#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onMeasure#0;class#SwitcherPanel#0" expanded="false" />
-            <element signature="method#onLayout#0;class#SwitcherPanel#0" expanded="false" />
+            <element signature="e#5307#5308#0" expanded="true" />
+            <element signature="e#5342#5343#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5453#5519#0" expanded="true" />
+            <element signature="e#6225#6226#0" expanded="true" />
+            <element signature="e#6266#6267#0" expanded="true" />
             <element signature="method#computeTopPosition#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeSlideOffset#0;class#SwitcherPanel#0" expanded="false" />
             <element signature="method#computeScroll#0;class#SwitcherPanel#0" expanded="false" />

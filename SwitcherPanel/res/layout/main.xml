@@ -11,8 +11,10 @@
                  android:layout_height="match_parent"
                  android:background="#2196F3">
 
-        <Button android:layout_width="match_parent"
-                android:layout_height="match_parent"
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="switcher">
         </Button>
 
@@ -23,8 +25,10 @@
                  android:layout_height="match_parent"
                  android:background="#56F870">
 
-        <Button android:layout_width="match_parent"
-                android:layout_height="match_parent"
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:text="content">
         </Button>
 
