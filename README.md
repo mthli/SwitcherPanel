@@ -3,7 +3,17 @@ SwitcherPanel
 
 Try to implement Firefox(for Android)'s switcher panel.
 
-__UNDER DEVELOPMENT!!!__
+It is a part of my project [Ninja](https://github.com/mthli/Ninja "Ninja").
+
+## How to use the source code?
+
+Just import the `SwitcherPanel` folder to your __IntelliJ IDEA__.
+
+## Thanks:
+
+ - [Android-SwipeToDismiss](https://github.com/romannurik/Android-SwipeToDismiss "Android-SwipeToDismiss")
+
+ - [AndroidSlidingUpPanel](https://github.com/umano/AndroidSlidingUpPanel "AndroidSlidingUpPanel")
 
 ## License:
 
